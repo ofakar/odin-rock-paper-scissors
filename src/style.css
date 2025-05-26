@@ -1,0 +1,100 @@
+/* Box sizing and common resets */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  transition: background 0.3s, color 0.3s;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+/* Light mode */
+:root {
+  --bg: #f7faff;
+  --fg: #1a2330;
+  --accent: #2563eb;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Dark mode with blue tint */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101624;
+    --fg: #e3eafc;
+    --accent: #60a5fa;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+  }
+}
+
+/* Accent example */
+a,
+.accent {
+  color: var(--accent);
+}
+
+.start-button {
+  font-size: 2rem;
+  transition: scale 0.1s;
+}
+.start-button:hover {
+  scale: 1.1;
+}
+.start-button:active {
+  scale: 0.9;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
