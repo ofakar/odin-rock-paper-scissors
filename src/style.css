@@ -1,8 +1,8 @@
-/* Box sizing and common resets */
+/* Resets */
+
 html {
   box-sizing: border-box;
 }
-
 *,
 *::before,
 *::after {
@@ -11,38 +11,13 @@ html {
   padding: 0;
   border: 0;
 }
-
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  transition: background 0.3s, color 0.3s;
+  transition: background-color 0.2s, color 0.2s;
   line-height: 1.5;
 }
-
-ul,
-ol {
-  list-style: none;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-button,
-input,
-select,
-textarea {
+button {
   font: inherit;
   background: none;
   border: none;
@@ -50,19 +25,17 @@ textarea {
   color: inherit;
 }
 
-/* Light mode */
+/* Color scheme */
+
 :root {
   --bg: #f7faff;
   --fg: #1a2330;
   --accent: #2563eb;
 }
-
 body {
   background: var(--bg);
   color: var(--fg);
 }
-
-/* Dark mode with blue tint */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #101624;
@@ -75,11 +48,7 @@ body {
   }
 }
 
-/* Accent example */
-a,
-.accent {
-  color: var(--accent);
-}
+/* Basic styles */
 
 .start-button {
   font-size: 2rem;
@@ -90,6 +59,11 @@ a,
 }
 .start-button:active {
   scale: 0.9;
+}
+
+header {
+  text-align: center;
+  font-size: 2rem;
 }
 
 main {
