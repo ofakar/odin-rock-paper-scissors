@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="src/favicon-32x32.png">
   <title>Rock Paper Scissors</title>
 </head>
 
@@ -12,7 +13,31 @@
     <h1>Rock Paper Scissors</h1>
   </header>
   <main>
-    <button class="start-button">Start</button>
+    <button class="btn start-button active">Start</button>
+    <div class="game-container">
+      <div class="button-group">
+        <button class="btn game-buttons" id="rock-button" value="rock">👊🏻</button>
+        <button class="btn game-buttons" id="paper-button" value="paper">🤚🏻</button>
+        <button class="btn game-buttons" id="scissors-button" value="scissors">✌🏻</button>
+      </div>
+      <h2 class="scores-header">Scores</h2>
+      <div class="score-container">
+        <div>
+          <h3 class="score-titles">Human</h3>
+          <div class="scores" id="human-score-div">0</div>
+        </div>
+        <div>
+          <h3 class="score-titles">Computer</h3>
+          <div class="scores" id="computer-score-div">0</div>
+        </div>
+      </div>
+      <div class="round-container">
+        <h2 class="round-header">Round</h2>
+        <h2 id="round-div">1</h2>
+      </div>
+      <div class="results"></div>
+      <button class="btn cancel-button" value="cancel">Cancel game</button>
+    </div>
   </main>
   <script type="module" src="/src/main.js"></script>
 </body>
